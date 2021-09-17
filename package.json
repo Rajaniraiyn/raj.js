@@ -1,5 +1,5 @@
 {
-  "name": "raj",
+  "name": "@rajaniraiyn/raj.js",
   "version": "1.0.0",
   "description": "A modern, fast, performant and lightweight jQuery alternative.",
   "main": "./dist/raj.cjs.js",
@@ -8,11 +8,12 @@
   "scripts": {
     "build": "rimraf dist && tsc && rollup -c",
     "postinstall": "npm dedupe",
+    "prepublish": "npm build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Rajaniraiyn/raj.js.git"
+    "url": "git+https://github.com/Rajaniraiyn/raj.js.git"
   },
   "keywords": [
     "raj",
@@ -42,6 +43,9 @@
     "rollup": "^2.56.3",
     "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.4.3"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "browserslist": [
     "supports es6-class",

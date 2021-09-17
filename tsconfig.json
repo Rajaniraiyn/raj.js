@@ -4,6 +4,8 @@
     "removeComments": true,
     "preserveConstEnums": true,
     "sourceMap": true,
+    "strict": true,
+    "declaration": true,
     "outDir": "./dist/source",
     "lib": [
       "DOM",
