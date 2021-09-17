@@ -560,7 +560,7 @@
   raj.noConflict = (removeAll?: boolean) => {
     switch (removeAll) {
       case true:
-        window["raj"] = window["jQuery"] = window["$"] = undefined;
+        window["$"] = window["jQuery"] = window["raj"] = undefined;
         break;
 
       case false:
@@ -684,5 +684,5 @@
     });
   };
 
-  window["raj"] = window["jQuery"] = raj;
+  window["raj"] = window["jQuery"] = window["$"] = raj;
 })();
