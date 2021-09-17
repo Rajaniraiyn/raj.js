@@ -8,7 +8,7 @@
   "scripts": {
     "build": "rimraf dist && tsc && rollup -c",
     "postinstall": "npm dedupe",
-    "prepublish": "npm build",
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
