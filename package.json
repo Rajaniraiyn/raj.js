@@ -1,0 +1,30 @@
+{
+  "name": "raj",
+  "version": "1.0.0",
+  "description": "A modern, fast, performant and lightweight jQuery alternative.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rajaniraiyn/raj.js.git"
+  },
+  "keywords": [
+    "raj",
+    "raj.js",
+    "jQuery",
+    "DOM",
+    "DOM-manuplation",
+    "javascript",
+    "html",
+    "css",
+    "web"
+  ],
+  "author": "Rajaniraiyn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rajaniraiyn/raj.js/issues"
+  },
+  "homepage": "https://github.com/Rajaniraiyn/raj.js#readme"
+}
