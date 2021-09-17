@@ -1,6 +1,6 @@
 {
   "name": "@rajaniraiyn/raj.js",
-  "version": "1.0.0",
+  "version": "1.0.0-beta",
   "description": "A modern, fast, performant and lightweight jQuery alternative.",
   "main": "./dist/raj.cjs.js",
   "module": "./dist/raj.esm.js",
