@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "module": "ESNext",
-    "removeComments": true,
     "preserveConstEnums": true,
     "sourceMap": true,
     "declaration": true,

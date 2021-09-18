@@ -1,4 +1,4 @@
-/**
+/**!
   Raj.js
   © 2021 Rajaniraiyn
   A modern alternative to jQuery.
