@@ -1,10 +1,10 @@
 {
   "name": "@rajaniraiyn/raj.js",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "A modern, fast, performant and lightweight jQuery alternative.",
-  "main": "./dist/raj.cjs.js",
-  "module": "./dist/raj.esm.js",
-  "browser": "./dist/raj.umd.js",
+  "main": "./dist/raj.js",
+  "module": "./dist/raj.js",
+  "browser": "./dist/raj.min.js",
   "scripts": {
     "build": "rimraf dist && rollup -c",
     "postinstall": "npm dedupe",
