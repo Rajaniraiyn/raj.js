@@ -20,42 +20,18 @@
         selector = selector.trim();
 
         function isSpecialSelector(selector: string): boolean {
-          switch (selector.includes("#") && selector.includes(".")) {
+          switch (
+            selector.includes("#") &&
+            (selector.includes(".") || /[~!+:>\\\-()\[\]*]\w*/gm.test(selector))
+          ) {
             case true:
               return true;
 
             default:
-              break;
+              // used for some special selectors
+              return /[~!+:>\\\-()\[\]*]\w*/gm.test(selector);
           }
           //if (selector.includes("#") && selector.includes(".")) return true;
-
-          var specialChars = [
-            "~",
-            "!",
-            "+",
-            ":",
-            ">",
-            ",",
-            "-",
-            "(",
-            ")",
-            "[",
-            "]",
-            "*",
-          ];
-
-          for (var i = 0, len = specialChars.length; i < len; i++) {
-            switch (selector.includes(specialChars[i])) {
-              case true:
-                return true;
-
-              default:
-                break;
-            }
-            //if (selector.includes(specialChars[i])) return true;
-          }
-
-          return false;
         }
         switch (isSpecialSelector(selector)) {
           case true:
