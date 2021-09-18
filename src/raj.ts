@@ -1,4 +1,4 @@
-/* 
+/**
   Raj.js
   © 2021 Rajaniraiyn
   A modern alternative to jQuery.
@@ -148,9 +148,7 @@
 
   class Raj extends Array {
     selector: keyof HTMLElementTagNameMap;
-    /**
-     * to handle jQuery "Sizzle" selector https://github.com/jquery/sizzle
-     */
+
     constructor(
       elements: any = undefined,
       selector: keyof HTMLElementTagNameMap
@@ -390,24 +388,23 @@
               return this[0].setAttribute(attribute, value);
           }
       }
-      /*
-        if (value === undefined) {
-          if (typeof attribute === "object") {
-            var values: string[] = Object.values(attribute);
-            forEach(Object.keys(attribute), (key: string, i: number) => {
-              this[0].setAttribute(key, values[i]);
-            });
-          }
-          return this[0].getAttribute(attribute);
-        } else if (typeof value === "function") {
-          forEach(this, (element: HTMLElement, i: number) => {
-            // @ts-ignore
-            value(i, element.getAttribute(attribute));
-          });
-        }
-  
-        return this[0].setAttribute(attribute, value);
-        */
+
+      // if (value === undefined) {
+      //   if (typeof attribute === "object") {
+      //     var values: string[] = Object.values(attribute);
+      //     forEach(Object.keys(attribute), (key: string, i: number) => {
+      //       this[0].setAttribute(key, values[i]);
+      //     });
+      //   }
+      //   return this[0].getAttribute(attribute);
+      // } else if (typeof value === "function") {
+      //   forEach(this, (element: HTMLElement, i: number) => {
+      //     // @ts-ignore
+      //     value(i, element.getAttribute(attribute));
+      //   });
+      // }
+
+      // return this[0].setAttribute(attribute, value);
     }
 
     /**
@@ -445,25 +442,24 @@
               return this[0].style.setProperty(property, value);
           }
       }
-      /*
-        if (value === undefined) {
-          if (typeof property === "object") {
-            var values: string[] = Object.values(property);
-            forEach(Object.keys(property), (key: string, i: number) => {
-              this[0].style.setProperty(key, values[i]);
-            });
-          }
-          //@ts-ignore
-          return getComputedStyle(this[0])[property];
-        } else if (typeof value === "function") {
-          forEach(this, (element: HTMLElement, i: number) => {
-            // @ts-ignore
-            value(i, getComputedStyle(element)[property]);
-          });
-        }
-  
-        return this[0].style.setProperty(property, value);
-        */
+
+      // if (value === undefined) {
+      //   if (typeof property === "object") {
+      //     var values: string[] = Object.values(property);
+      //     forEach(Object.keys(property), (key: string, i: number) => {
+      //       this[0].style.setProperty(key, values[i]);
+      //     });
+      //   }
+      //   //@ts-ignore
+      //   return getComputedStyle(this[0])[property];
+      // } else if (typeof value === "function") {
+      //   forEach(this, (element: HTMLElement, i: number) => {
+      //     // @ts-ignore
+      //     value(i, getComputedStyle(element)[property]);
+      //   });
+      // }
+
+      // return this[0].style.setProperty(property, value);
     }
 
     /**
@@ -548,13 +544,12 @@
       default:
         return Object.assign(target, ...args);
     }
-    /*
-      if ([...args][0] === undefined) {
-        return Object.assign(raj, target);
-      }
-  
-      return Object.assign(target, ...args);
-      */
+
+    // if ([...args][0] === undefined) {
+    //   return Object.assign(raj, target);
+    // }
+
+    // return Object.assign(target, ...args);
   };
 
   raj.noConflict = (removeAll?: boolean) => {
@@ -596,12 +591,10 @@
               return (raj.cache[element[raj.expando]] = name);
             return Object.assign(raj.cache[element[raj.expando]], name);
 
-          /* 
-            var values = Object.values(name);
-              forEach(Object.keys(name), (key: string, i: number) => {
-                raj.cache[element[raj.expando]][key] = values[i];
-              });
-               */
+          // var values = Object.values(name);
+          //   forEach(Object.keys(name), (key: string, i: number) => {
+          //     raj.cache[element[raj.expando]][key] = values[i];
+          //   });
 
           default:
             break;
@@ -617,28 +610,27 @@
         }
         return (raj.cache[element[raj.expando]][name] = value);
     }
-    /* 
-      if (value !== undefined) {
-        element[raj.expando] = ++raj.cache.latest;
-        if (raj.cache[element[raj.expando]] === undefined)
-          raj.cache[element[raj.expando]] = {};
-        return (raj.cache[element[raj.expando]][name] = value);
-      }
-  
-      if (typeof name === "string") {
-        if (raj.cache[element[raj.expando]] === undefined)
-          raj.cache[element[raj.expando]] = {};
-        return raj.cache[element[raj.expando]][name];
-      } else if (typeof name === "object") {
-        element[raj.expando] = ++raj.cache.latest;
-        if (raj.cache[element[raj.expando]] === undefined)
-          raj.cache[element[raj.expando]] = {};
-        var values = Object.values(name);
-        forEach(Object.keys(name), (key: string, i: number) => {
-          raj.cache[element[raj.expando]][key] = values[i];
-        });
-      }
-      */
+
+    // if (value !== undefined) {
+    //   element[raj.expando] = ++raj.cache.latest;
+    //   if (raj.cache[element[raj.expando]] === undefined)
+    //     raj.cache[element[raj.expando]] = {};
+    //   return (raj.cache[element[raj.expando]][name] = value);
+    // }
+
+    // if (typeof name === "string") {
+    //   if (raj.cache[element[raj.expando]] === undefined)
+    //     raj.cache[element[raj.expando]] = {};
+    //   return raj.cache[element[raj.expando]][name];
+    // } else if (typeof name === "object") {
+    //   element[raj.expando] = ++raj.cache.latest;
+    //   if (raj.cache[element[raj.expando]] === undefined)
+    //     raj.cache[element[raj.expando]] = {};
+    //   var values = Object.values(name);
+    //   forEach(Object.keys(name), (key: string, i: number) => {
+    //     raj.cache[element[raj.expando]][key] = values[i];
+    //   });
+    // }
   };
 
   raj.removeData = (element: HTMLElement, name: string | object) => {
@@ -647,11 +639,11 @@
         raj.cache[element[raj.expando]] = undefined;
         break;
     }
-    /*
-      if (name === undefined) {
-        raj.cache[element[raj.expando]] = undefined;
-      }
-      */
+
+    // if (name === undefined) {
+    //   raj.cache[element[raj.expando]] = undefined;
+    // }
+
     raj.cache[element[raj.expando]][name] = undefined;
   };
 
