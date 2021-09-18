@@ -1,6 +1,6 @@
 {
   "name": "@rajaniraiyn/raj.js",
-  "version": "1.0.0-beta",
+  "version": "1.0.0-beta.2",
   "description": "A modern, fast, performant and lightweight jQuery alternative.",
   "main": "./dist/raj.cjs.js",
   "module": "./dist/raj.esm.js",
@@ -8,7 +8,7 @@
   "scripts": {
     "build": "rimraf dist && tsc && rollup -c",
     "postinstall": "npm dedupe",
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
